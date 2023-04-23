@@ -23,6 +23,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.left h2{
+  color: hsl(0, 0%, 100%);
+
+}
 .right{
     display: flex;
     gap: 0.5rem;
@@ -32,10 +36,21 @@ body {
     align-self: flex-end;
     font-weight: bold;
   color: hsl(0, 0%, 100%);
+  font-size: 12px;
 
 }
 .range{
     width: 50px;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+}
+.p{
+    display: flex;
+    gap: .6rem;
+  color: hsl(0, 0%, 100%);
+    
 }
 .output input {
   width: 100%;
@@ -61,7 +76,7 @@ body {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 7px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 800;
   padding: 1rem;
 }
 .reset {
