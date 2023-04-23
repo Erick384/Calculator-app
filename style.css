@@ -1,63 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background-color: hsl(222, 26%, 31%);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.right{
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    background-color: hsl(222, 26%, 31%);
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    gap: 0.5rem;
 }
-.container{
+.theme{
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 5px;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-.output input{
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    height: 4.5rem;
-    padding: 1.2rem;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    background-color: hsl(224, 36%, 15%);
-    
-}
-.buttons{
-    display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    background-color: hsl(223, 31%, 20%);
-    padding: 1.5rem;
-    gap: 1rem;
-    border-radius: 5px;
-
-}
-.buttons button{
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    /* height: 100px;
-    width: 100px; */
-    border-radius: 7px;
-    font-size: 20px;
+    align-self: flex-end;
     font-weight: bold;
-    padding: 1rem;
+  color: hsl(0, 0%, 100%);
 
 }
-#reset{
-    grid-column: span 2;
+.range{
+    width: 50px;
+}
+.output input {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  height: 5.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  padding: 1.2rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: hsl(224, 36%, 15%);
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: hsl(223, 31%, 20%);
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 5px;
+}
+.buttons button {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1rem;
+}
+.reset {
+  grid-column: span 2;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+}
+.equal {
+  grid-column: span 2;
+  background-color: hsl(6, 63%, 50%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+}
+.del {
     background-color: hsl(225, 21%, 49%);
-    color: (0, 0%, 100%);
-}
-#equal{
-    grid-column: span 2;
-
+    color: hsl(0, 0%, 100%);
+    border: none; 
 }
